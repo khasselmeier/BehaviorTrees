@@ -13,11 +13,11 @@ public class GuardBT : Tree
     {
         Node root = new Selector(new List<Node>
         {
-            //new Sequence(new List<Node>
-            //{
-            //    new CheckEnemyInAttackRange(transform),
-            //    new TaskAttack(transform),
-            //}),
+            new Sequence(new List<Node>
+            {
+               new CheckEnemyInAttackRange(transform),
+                new TaskAttack(transform),
+            }),
             new Sequence(new List<Node>
             {
                 new CheckEnemyInFOVRange(transform),
